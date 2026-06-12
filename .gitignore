@@ -1,32 +1,64 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs / editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Go
+bin/
+dist/
+vendor/
+
+# Java
+*.class
+*.jar
+target/
+.gradle/
+
+# Rust
+target/
+
+# C/C++
+*.o
 *.so
-*.dylib
-
-# Test binary, built with `go test -c`
-*.test
-
-# Code coverage profiles and other test artifacts
+*.a
 *.out
-coverage.*
-*.coverprofile
-profile.cov
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+# --- Storage lab artifacts (CRITICAL — these can be very large) ---
+*.img
+*.iso
+*.qcow2
+*.vmdk
+*.vdi
+*.raw
+testdata/
 
-# Go workspace file
-go.work
-go.work.sum
+# fio results files (optional — uncomment to ignore benchmark result files)
+# *.fio
 
-# env file
+# --- Security (important for storage labs) ---
 .env
+*.key
+*.pem
+*.luks
+credentials/
 
-# Editor/IDE
-# .idea/
-# .vscode/
+# --- Benchmark output ---
+*.log
+
+# fio-results directory (optional — uncomment to ignore)
+# fio-results/
